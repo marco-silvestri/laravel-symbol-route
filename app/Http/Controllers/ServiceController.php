@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     public function index(){
-        return view('services.index');
+        $services = [
+            'Electrical cabling',
+            'Power bugfixes',
+            'Green energy'
+        ];
+        
+        return view('services.index', compact('services'));
     }
 }
